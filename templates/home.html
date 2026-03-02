@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Fraud Detection</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            background: white;
+            color: black;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 95%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin-top: 20px;
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16325c;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Credit Card Fraud Detection System</h2>
+
+    <!-- IMPORTANT: Must match your Flask route -->
+    <form action="/predictdata" method="POST">
+
+        <div class="grid">
+
+            <input type="text" name="Time" placeholder="Time" required>
+
+            <input type="text" name="V1" placeholder="V1" required>
+            <input type="text" name="V2" placeholder="V2" required>
+            <input type="text" name="V3" placeholder="V3" required>
+            <input type="text" name="V4" placeholder="V4" required>
+            <input type="text" name="V5" placeholder="V5" required>
+            <input type="text" name="V6" placeholder="V6" required>
+            <input type="text" name="V7" placeholder="V7" required>
+            <input type="text" name="V8" placeholder="V8" required>
+            <input type="text" name="V9" placeholder="V9" required>
+            <input type="text" name="V10" placeholder="V10" required>
+
+            <input type="text" name="V11" placeholder="V11" required>
+            <input type="text" name="V12" placeholder="V12" required>
+            <input type="text" name="V13" placeholder="V13" required>
+            <input type="text" name="V14" placeholder="V14" required>
+            <input type="text" name="V15" placeholder="V15" required>
+            <input type="text" name="V16" placeholder="V16" required>
+            <input type="text" name="V17" placeholder="V17" required>
+            <input type="text" name="V18" placeholder="V18" required>
+            <input type="text" name="V19" placeholder="V19" required>
+            <input type="text" name="V20" placeholder="V20" required>
+
+            <input type="text" name="V21" placeholder="V21" required>
+            <input type="text" name="V22" placeholder="V22" required>
+            <input type="text" name="V23" placeholder="V23" required>
+            <input type="text" name="V24" placeholder="V24" required>
+            <input type="text" name="V25" placeholder="V25" required>
+            <input type="text" name="V26" placeholder="V26" required>
+            <input type="text" name="V27" placeholder="V27" required>
+            <input type="text" name="V28" placeholder="V28" required>
+
+            <input type="text" name="Amount" placeholder="Transaction Amount" required>
+
+        </div>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <div class="result">
+        {{ prediction_text }}
+    </div>
+
+</div>
+
+</body>
+</html>
